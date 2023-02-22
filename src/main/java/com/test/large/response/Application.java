@@ -13,7 +13,7 @@ public class Application {
         .setInstances(CpuCoreSensor.availableProcessors() * 2)
       , event -> {
         if (event.succeeded()) {
-          System.out.println("Verticle Deployed");
+          System.out.println("MainVerticle Deployed");
         }
         else {
           event.cause().printStackTrace();
