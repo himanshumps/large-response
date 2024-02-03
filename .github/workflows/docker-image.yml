@@ -1,0 +1,13 @@
+name: Branch Name
+
+on:
+  push:
+    branches:  "feature/test**" 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Branch name
+      run: echo running on branch ${GITHUB_REF##*/}
+      
